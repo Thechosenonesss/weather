@@ -1,0 +1,167 @@
+body {
+  background-image: url("../assets/sunset-12744.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.Content-area {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  row-gap: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 700px;
+  padding: 50px;
+
+  backdrop-filter: blur(10px); /* Glass blur effect */
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for better depth */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+}
+.text-content {
+  grid-area: 1 / 1 / 4 / 6;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row: 1fr;
+
+  position: relative;
+  z-index: 1;
+  font-size: 30px;
+
+  height: 250px;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+.text-content .weather-to-day {
+  grid-area: 1/1/2/2;
+  display: flex;
+  flex-direction: column;
+}
+.weather-to-day .Day {
+  font-size: 70px;
+}
+.text-content .More-info {
+  grid-area: 1 / 4 / 2 / 5;
+  display: grid;
+  row-gap: 5px;
+  column-gap: 5px;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  font-size: 15px;
+}
+
+.More-info .Labels{
+  grid-area: 1/1/2/2;
+  
+
+}
+.More-info .values{
+  grid-area: 1/2/2/3;
+  
+  
+}
+.sun-rise{
+  grid-area: 2/1/3/2;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+ 
+  text-align: justify;
+  
+ 
+}
+.sun-set{
+  grid-area: 2/2/3/3;
+  align-self: flex-end;
+  
+  display: flex;
+  flex-direction: column;
+ 
+  text-align: justify;
+  
+}
+.sun-set .icons,.sun-rise .icons{
+  justify-self: start;
+  font-size: 40px 
+  
+  
+ 
+
+}
+.sun-set h5,.sun-rise h5{
+  font-size: 25px;
+  
+  
+}
+.to-day-icon {
+  grid-area: 1 / 2 / 2 / 4;
+  align-self: flex-end;
+  justify-self: center;
+  font-size: 150px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+.week-forcast {
+  grid-area: 6 / 1 / 8 / 6;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 15px;
+}
+.week-forcast article {
+  width: 100px;
+  height: 120px;
+ border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  text-align: center;
+}
+.day-forcast {
+  grid-area: 4 / 1 / 6 / 6;
+  display: flex;
+  
+  gap: 3px;
+}
+.day-forcast article {
+  height: 400;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+.day-forcast .weather {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  font-size: 25px;
+}
+.day-forcast .morning:first-child,
+.afternoon,
+.night {
+  font-size: 20px;
+}
+
+.icon {
+  width: 50px;
+  font-size: 50px;
+}
